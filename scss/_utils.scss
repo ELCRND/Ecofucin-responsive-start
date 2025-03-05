@@ -1,0 +1,51 @@
+@use "helpers" as *;
+
+.container {
+  max-width: vw(1220px);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.hidden-mobile {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.visible-mobile {
+  @include mobile-above {
+    display: none !important;
+  }
+}
+
+.slide {
+  height: 100vh;
+  width: 100vw;
+}
+
+.accent-color {
+  color: var(--color-green);
+}
+
+.overline-text {
+  line-height: 90%;
+  font-size: 0.6em;
+  vertical-align: top;
+}
+
+.trademark {
+  line-height: 90%;
+  font-size: 0.7em;
+  vertical-align: top;
+}
+
+.trademark--white {
+  line-height: 90%;
+  font-size: 0.7em;
+  vertical-align: top;
+  color: #ffffff;
+}

@@ -1,0 +1,24 @@
+@use "helpers" as *;
+
+:root {
+  --color-white: #ffffff;
+  --color-black: #141414;
+  --color-yellow: #fff701;
+  --color-green: #64b22a;
+  --color-green-alt: #499f0a;
+  --color-green-dark: #20400d;
+  --text-regular: #1e1842;
+
+  --font-family: "Roboto", -apple-system, Helvetica, sans-serif;
+  --second-family: "Roboto Condensed", -apple-system, Roboto, Helvetica,
+    sans-serif;
+
+  --container-width: #{rem(1600)};
+  --container-padding-x: #{rem(16)};
+
+  --transition-duration: 0.2s;
+
+  @include laptop {
+    --container-width: #{rem(1280)};
+  }
+}

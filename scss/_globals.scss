@@ -1,0 +1,63 @@
+@use "helpers" as *;
+
+html {
+  overflow: hidden;
+}
+
+body {
+  @include fluid-text(14, 18);
+  font-family: var(--font-family);
+  color: var(--text-regular);
+  overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-container {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  touch-action: pan-y;
+}
+
+.slider-container.off {
+  overflow: visible;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  touch-action: pan-y;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+:focus-visible {
+  outline: rem(2) dashed var(--color-accent);
+  outline-offset: rem(4);
+  transition-duration: 0s !important;
+}
+
+a,
+button {
+  &[aria-label] {
+    position: relative;
+
+    &::before {
+      @include abs-center;
+      @include square(rem(44));
+
+      content: "";
+    }
+  }
+}
