@@ -2,9 +2,9 @@
 
 .header {
   width: 100%;
-  border-radius: vw(2px);
+  border-radius: rem(2);
   background-color: var(--color-green);
-  box-shadow: vw(0px) vw(4px) vw(20px) rgba(0, 0, 0, 0.1);
+  box-shadow: rem(0) rem(4) rem(20) rgba(0, 0, 0, 0.1);
   position: fixed;
   z-index: 10;
 }
@@ -14,27 +14,27 @@
 }
 
 .header__container {
-  min-height: vw(70px);
+  min-height: rem(70);
   margin-left: auto;
   margin-right: auto;
-  padding-left: vw(20px);
-  padding-right: vw(20px);
+  padding-left: rem(20);
+  padding-right: rem(20);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .header__logo img {
-  width: vw(131px);
+  width: rem(131);
   flex-shrink: 0;
 }
 
 .header__nav {
-  min-width: vw(240px);
-  width: vw(667px);
+  min-width: rem(240);
+  width: rem(667);
   margin-top: auto;
   margin-bottom: auto;
-  font-size: vw(16px);
+  font-size: rem(16);
   text-transform: uppercase;
 
   ul {
@@ -56,8 +56,8 @@
 
 .header__menu-btn {
   display: none;
-  width: vw(30px);
-  height: vw(24px);
+  width: rem(30);
+  height: rem(24);
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -67,8 +67,8 @@
 
 .header-menu-btn span {
   width: 100%;
-  height: vw(2px);
-  border-radius: vw(10px);
+  height: rem(2);
+  border-radius: rem(10);
   background-color: #fff;
   transition: rotate 0.2s ease, opacity 0.2s ease;
 }
@@ -80,7 +80,7 @@
 
 .header-menu-btn.open span:nth-of-type(1) {
   rotate: 45deg;
-  translate: 0 vw(11px);
+  translate: 0 rem(11);
 }
 
 .header-menu-btn.open span:nth-of-type(2) {
@@ -89,35 +89,35 @@
 
 .header-menu-btn.open span:nth-of-type(3) {
   rotate: -45deg;
-  translate: 0 -vw(11px);
+  translate: 0 -rem(11);
 }
 
 .header__buy {
-  padding: vw(13px) vw(35px);
-  border-radius: vw(50px);
+  padding: rem(13) rem(35);
+  border-radius: rem(50);
   background-color: var(--color-yellow);
   display: flex;
   align-items: center;
-  gap: vw(6px);
+  gap: rem(6);
   color: var(--color-green-dark);
   font-weight: 300;
-  font-size: vw(16px);
+  font-size: rem(16);
   text-wrap: nowrap;
 
   svg {
-    width: vw(16px);
-    height: vw(20px);
+    width: rem(16);
+    height: rem(20);
   }
 }
 
 .header__buy--fixed {
-  height: vw(181px);
-  width: vw(63px);
+  height: rem(181);
+  width: rem(63);
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #fff701;
-  border-radius: vw(30px) 0 0 vw(30px);
+  border-radius: rem(30) 0 0 rem(30);
   position: absolute;
   top: 50vh;
   right: 0;
@@ -128,26 +128,26 @@
 
   span {
     font-weight: 300;
-    font-size: vw(18px);
+    font-size: rem(18);
     transform: rotate(-90deg);
     translate: 2% -90%;
   }
 
   img {
-    width: vw(20px);
-    height: vw(20px);
+    width: rem(20);
+    height: rem(20);
   }
 }
 
 .header__buy--fixed svg {
   position: absolute;
-  bottom: vw(30px);
+  bottom: rem(30);
   right: 50%;
-  translate: 60% 0;
+  translate: 50% 0;
   rotate: -90deg;
 }
 
-@media (min-width: vw(768px)) {
+@media (min-width: rem(768)) {
   .nav-item a:hover {
     opacity: 0.7;
   }
@@ -158,7 +158,7 @@
   }
 }
 
-@media (max-width: vw(767px)) {
+@media (max-width: rem(767)) {
   .nav-item a:active {
     opacity: 0.7;
   }
@@ -168,26 +168,26 @@
   }
 }
 
-@media (min-width: vw(768px)) {
+@media (min-width: rem(768)) {
   .buy-button:hover {
-    box-shadow: 0 0 vw(5px) rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 0 0 rem(5) rgba(0, 0, 0, 0.5) inset;
   }
 }
 
-@media (max-width: vw(767px)) {
+@media (max-width: rem(767)) {
   .buy-button:active {
-    box-shadow: 0 0 vw(5px) rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 0 0 rem(5) rgba(0, 0, 0, 0.5) inset;
   }
 }
 
-@media (max-width: vw(1023px)) {
+@media (max-width: rem(1023)) {
   .buy-button {
-    padding-left: vw(20px);
-    padding-right: vw(20px);
+    padding-left: rem(20);
+    padding-right: rem(20);
   }
 }
 
-@media screen and (max-width: vw(1023px)) {
+@media screen and (max-width: rem(1023)) {
   .main-nav {
     text-transform: capitalize;
   }
@@ -197,9 +197,9 @@
   }
 }
 
-@media screen and (max-width: vw(767px)) {
+@media screen and (max-width: rem(767)) {
   .header-container {
-    min-height: vw(50px);
+    min-height: rem(50);
   }
 
   .main-nav {
@@ -215,7 +215,7 @@
     translate: 0 -100%;
     z-index: 100;
     transition: translate 0.3s ease;
-    font-size: vw(16px);
+    font-size: rem(16);
     text-transform: uppercase;
     visibility: hidden;
   }
@@ -229,7 +229,7 @@
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    gap: vw(20px);
+    gap: rem(20);
     opacity: 0;
   }
 
@@ -243,20 +243,20 @@
 
   .buy-button {
     margin-left: auto;
-    margin-right: vw(20px);
-    padding: vw(6px) vw(18px);
-    font-size: vw(14px);
+    margin-right: rem(20);
+    padding: rem(6) rem(18);
+    font-size: rem(14);
   }
 
   .buy-button svg {
-    width: vw(12px);
-    height: vw(16px);
+    width: rem(12);
+    height: rem(16);
   }
 
   .header-buy-btn {
-    width: vw(42px);
-    border-radius: vw(20px) 0 0 vw(20px);
-    font-size: vw(16px);
+    width: rem(42);
+    border-radius: rem(20) 0 0 rem(20);
+    font-size: rem(16);
     translate: 0 -50%;
   }
 }

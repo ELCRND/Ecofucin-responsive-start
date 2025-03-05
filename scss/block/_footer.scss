@@ -1,0 +1,191 @@
+@use "../helpers/" as *;
+
+.footer {
+  height: 50vh !important;
+  translate: 0 50%;
+  width: 100vw;
+  //   padding-top: rem(90);
+  padding-bottom: rem(90);
+  //   height: 100vh !important;
+
+  position: relative;
+}
+
+.footer {
+  border-top: rem(1) solid #e8eeef;
+}
+
+.footer__inner {
+  width: rem(1180);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: rem(15);
+  padding-right: rem(15);
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: rem(14);
+  padding-bottom: rem(150);
+  padding-top: rem(30);
+}
+
+.footer__inner ul {
+  padding-left: rem(40);
+  li {
+    list-style: disc;
+  }
+}
+
+.footer__inner p {
+  margin-top: rem(20);
+  margin-bottom: rem(20);
+}
+
+.footer__inner a {
+  color: #232323;
+  text-decoration: underline;
+  text-decoration-color: rgba(35, 35, 35, 0.3);
+}
+
+.footer__logo {
+  width: fit-content;
+  img {
+    width: rem(90);
+  }
+}
+
+.footer__inner a:hover {
+  text-decoration-color: rgba(35, 35, 35, 0);
+}
+
+.footer__privacy-policy {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__forma {
+  width: 100%;
+  padding-top: rem(10);
+}
+
+.footer__site-info {
+  margin-top: rem(14);
+  width: 100%;
+}
+
+.footer__contraindications {
+  width: 100%;
+  color: #bac3c5;
+  flex-basis: 100%;
+  font: 300 rem(48) "Yanone Kaffeesatz", sans-serif;
+  letter-spacing: rem(-3);
+  margin-top: rem(40);
+  max-width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 110%;
+}
+
+.footer__contraindications span {
+  //   font-size: rem(33);
+}
+
+//   @media (min-width: rem(768)) {
+//     .footer {
+//       height: 50vh !important;
+//       translate: 0 50%;
+//     }
+
+//     .footer__inner {
+//       width: rem(750);
+//     }
+
+//     .header__nav-mobile {
+//       display: none;
+//     }
+//     .header__logo {
+//       margin-right: 5%;
+//     }
+//     .header__nav {
+//       display: block;
+//       left: auto;
+//       position: relative;
+//       top: auto;
+//       width: auto;
+//     }
+//     .header__where-buy {
+//       position: absolute;
+//       right: 0;
+//       top: rem(60);
+//       display: flex;
+//       flex-wrap: wrap;
+//     }
+//     .header__where-buy-link {
+//       background-color: #60b124;
+//       border-radius: rem(32);
+//       display: inline-block;
+//       font-size: rem(18);
+//       height: rem(46);
+//       line-height: rem(46);
+//       margin: rem(5) 0 rem(10) auto;
+//       padding: 0 rem(24);
+//       width: auto;
+//       min-width: 50%;
+//     }
+//     .header__where-buy-link img {
+//       display: inline-block;
+//     }
+//     .header__where-buy-link:hover {
+//       background-color: #67ba29;
+//       color: #fff;
+//     }
+//     .header__where-buy-mobile {
+//       display: none;
+//     }
+//     .content__section {
+//       margin-bottom: rem(20);
+//     }
+//     .content__section--pregnancy {
+//       background-image: url(/local/templates/ecofucin.ru/images/pregnancy__woman.png);
+//       background-position: calc(100% + rem(135)) -rem(76);
+//       background-repeat: no-repeat;
+//     }
+
+//     .footer__privacy-policy {
+//       width: 35%;
+//     }
+//     .footer__forma {
+//       width: 100%;
+//       padding-top: rem(20);
+//     }
+//     .footer__site-info {
+//       margin: 0;
+//       text-align: right;
+//       width: 65%;
+//     }
+//     .footer__contraindications {
+//       font-size: rem(30);
+//       margin-top: rem(22);
+//     }
+//     .footer__contraindications span {
+//       display: inline;
+//       font-size: inherit;
+//     }
+//   }
+
+//   @media (min-width: rem(992)) {
+//     .footer__inner {
+//       width: rem(970);
+//     }
+//     .footer__contraindications {
+//       font-size: rem(48);
+//       letter-spacing: -rem(3);
+//     }
+//   }
+
+//   @media (min-width: rem(1200)) {
+//     .footer__inner {
+//       width: rem(1170);
+//     }
+//   }

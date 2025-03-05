@@ -1,18 +1,15 @@
 @use "../helpers/" as *;
 
 .thrush {
-  padding-top: vw(100px);
-  padding-bottom: vw(37px);
+  padding-top: rem(100);
+  padding-bottom: rem(37);
   display: flex;
   align-items: center;
 }
 
-.thrush__container {
-}
-
 .thrush__title {
-  margin-bottom: vw(15px);
-  font-size: vw(36px);
+  margin-bottom: rem(15);
+  font-size: rem(36);
   font-family: var(--second-family);
   font-weight: 400;
   line-height: 100%;
@@ -20,11 +17,11 @@
 }
 
 .thrush__description {
-  max-width: vw(1035px);
-  margin-bottom: vw(40px);
+  max-width: rem(1035);
+  margin-bottom: rem(40);
   margin-left: auto;
   margin-right: auto;
-  font-size: vw(18px);
+  font-size: rem(18);
   font-weight: 400;
   line-height: 111%;
   text-align: center;
@@ -35,21 +32,21 @@
 .thrush__content {
   display: flex;
   flex-direction: column;
-  row-gap: vw(20px);
+  row-gap: rem(20);
 
   .thrush__row {
     display: flex;
     align-items: center;
-    gap: vw(50px);
+    gap: rem(50);
 
     &:first-of-type {
       .thrush__item {
         &:nth-of-type(1) {
           p {
-            max-width: vw(581px);
+            max-width: rem(581);
             text-align: right;
             font-weight: 400;
-            font-size: vw(18px);
+            font-size: rem(18);
             line-height: 133%;
             text-align: right;
             color: var(--text-regular);
@@ -57,27 +54,27 @@
         }
 
         &:nth-of-type(2) {
-          width: vw(526px);
-          padding: vw(40px);
-          border-radius: vw(30px);
+          width: rem(526);
+          padding: rem(40);
+          border-radius: rem(30);
           background: var(--color-green-alt);
           position: relative;
 
           img {
-            width: vw(199px);
-            height: vw(234px);
+            width: rem(199);
+            height: rem(234);
             position: absolute;
             bottom: 0;
-            right: vw(9px);
+            right: rem(9);
             z-index: 0;
-            border-radius: 0 0 vw(18px) 0;
+            border-radius: 0 0 rem(18) 0;
             user-select: none;
           }
 
           p {
-            max-width: vw(292px);
+            max-width: rem(292);
             font-weight: 400;
-            font-size: vw(18px);
+            font-size: rem(18);
             line-height: 125%;
             position: relative;
             z-index: 1;
@@ -89,14 +86,14 @@
 
     &:last-of-type {
       .thrush__item:nth-of-type(1) {
-        padding: vw(30px) vw(25px) vw(30px) vw(40px);
-        border-radius: vw(30px);
+        padding: rem(30) rem(25) rem(30) rem(40);
+        border-radius: rem(30);
         background: var(--color-green-alt);
 
         p {
-          max-width: vw(461px);
+          max-width: rem(461);
           font-weight: 600;
-          font-size: vw(16px);
+          font-size: rem(16);
           line-height: 125%;
           color: var(--color-white);
         }
@@ -104,9 +101,9 @@
 
       .thrush__item:nth-of-type(2) {
         p {
-          max-width: vw(581px);
+          max-width: rem(581);
           font-weight: 400;
-          font-size: vw(16px);
+          font-size: rem(16);
           line-height: 133%;
           color: var(--text-regular);
         }
@@ -115,9 +112,9 @@
   }
 }
 
-//   @media (max-width: vw(1279px)) {
+//   @media (max-width: rem(1279)) {
 //     .thrush-item:nth-of-type(3) {
-//       margin-right: vw(50px);
+//       margin-right: rem(50);
 //     }
 
 //     .thrush-item:nth-of-type(4) {
@@ -125,37 +122,37 @@
 //     }
 //   }
 
-//   @media (max-width: vw(1023px)) {
+//   @media (max-width: rem(1023)) {
 //     .thrush-content {
-//       grid-template-columns: repeat(auto-fit, minmax(vw(360px), 1fr));
+//       grid-template-columns: repeat(auto-fit, minmax(rem(360), 1fr));
 //     }
 
 //     .thrush-item:nth-of-type(3) {
-//       margin-right: vw(20px);
+//       margin-right: rem(20);
 //     }
 
 //     .thrush-item:nth-of-type(2) {
-//       margin-left: vw(20px);
+//       margin-left: rem(20);
 //     }
 //   }
 
-//   @media (max-width: vw(767px)) {
+//   @media (max-width: rem(767)) {
 //     .thrush-section {
 //       align-items: start;
 //     }
 
 //     .thrush-section .section-title {
-//       font-size: vw(24px);
+//       font-size: rem(24);
 //       line-height: 100%;
 //     }
 
 //     .section-description {
-//       font-size: vw(16px);
+//       font-size: rem(16);
 //       line-height: 100%;
 //     }
 
 //     .thrush-content {
-//       margin-top: vw(30px);
+//       margin-top: rem(30);
 //       display: flex;
 //       flex-direction: column;
 //       align-items: center;
@@ -163,14 +160,14 @@
 //     }
 
 //     .thrush-content .thrush-item {
-//       max-width: vw(526px);
+//       max-width: rem(526);
 //       margin: 0;
-//       padding: vw(12px);
-//       border-radius: vw(20px);
+//       padding: rem(12);
+//       border-radius: rem(20);
 //     }
 
 //     .thrush-content .thrush-item p {
-//       font-size: vw(14px);
+//       font-size: rem(14);
 //       line-height: 120%;
 //       text-align: left;
 //     }

@@ -1,0 +1,129 @@
+@use "../helpers/" as *;
+
+.importance {
+  padding-top: rem(70);
+  display: flex;
+  align-items: center;
+}
+
+.importance__title {
+  font-size: rem(36);
+  font-family: var(--second-family);
+  font-weight: 400;
+  line-height: 100%;
+  text-align: center;
+}
+
+.importance__content {
+  width: 100%;
+  margin-top: rem(50);
+  display: flex;
+  align-items: center;
+  gap: rem(50);
+}
+
+.importance__card {
+  width: rem(526);
+  height: rem(180);
+  padding-left: rem(40);
+  padding-right: rem(120);
+  border-radius: rem(30);
+  background: var(--color-green-alt);
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.importance__text p {
+  max-width: rem(593);
+  font-size: rem(18);
+  font-weight: 400;
+  line-height: 133%;
+  text-align: right;
+  position: relative;
+}
+
+.importance__card p {
+  max-width: rem(350);
+  font-weight: 600;
+  font-size: rem(16);
+  line-height: 125%;
+  color: var(--color-white);
+  position: relative;
+  z-index: 1;
+}
+
+.importance__card img {
+  width: rem(110);
+  position: absolute;
+  top: 0;
+  right: 0;
+  user-select: none;
+}
+
+.importance__conclusion {
+  margin-top: rem(50);
+  font-size: rem(24);
+  font-family: var(--second-family);
+  font-weight: 500;
+  line-height: 150%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.importance__overline {
+  font-size: 0.6em;
+  line-height: 180%;
+  vertical-align: top;
+}
+
+//   @media (max-width: rem(1023)) {
+//     .importance-content {
+//       flex-direction: column;
+//     }
+
+//     .importance-text p {
+//       text-align: center;
+//     }
+//   }
+
+//   @media (max-width: rem(767)) {
+//     .importance-section {
+//       justify-content: start;
+//     }
+
+//     .importance-section .section-title {
+//       font-size: rem(24);
+//       line-height: 100%;
+//     }
+
+//     .importance-content {
+//       margin-top: rem(20);
+//       gap: rem(20);
+//     }
+
+//     .importance-card {
+//       width: auto;
+//       height: auto;
+//       padding: rem(20);
+//       border-radius: rem(20);
+//     }
+
+//     .importance-card img {
+//       display: none;
+//     }
+
+//     .importance-text p,
+//     .importance-card p {
+//       max-width: rem(593);
+//       font-size: rem(16);
+//       line-height: 120%;
+//     }
+
+//     .importance-conclusion {
+//       font-size: rem(18);
+//       line-height: 120%;
+//       text-align: center;
+//       margin-top: rem(20);
+//     }
+//   }

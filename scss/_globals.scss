@@ -2,10 +2,11 @@
 
 html {
   overflow: hidden;
+  font-size: vw(16px);
 }
 
 body {
-  @include fluid-text(14, 18);
+  font-size: 1rem;
   font-family: var(--font-family);
   color: var(--text-regular);
   overflow: hidden;

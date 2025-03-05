@@ -1,13 +1,9 @@
 @use "../helpers/" as *;
 .hero {
-  padding-top: 70px;
+  padding-top: rem(70);
+  display: flex;
+  align-items: center;
   position: relative;
-  font-family: var(--second-family);
-  color: #66b72a;
-  font-weight: 600;
-  text-transform: uppercase;
-  flex-wrap: wrap;
-  overflow: hidden;
 }
 
 .hero__bg {
@@ -30,21 +26,19 @@
 }
 
 .hero__product-img {
-  width: vw(266px);
+  width: rem(266);
   position: absolute;
-  bottom: vw(19px);
-  right: vw(400px);
-  //   left: 50%;
-  //   translate: vw(-14px) 0;
+  bottom: rem(19);
+  right: rem(400);
   user-select: none;
   z-index: 1;
 }
 
 .hero__woman-img {
-  width: vw(328px);
+  width: rem(328);
   position: absolute;
   bottom: 0;
-  right: vw(58px);
+  right: rem(58);
   filter: drop-shadow(12px 19px 50px rgba(0, 0, 0, 0.1));
   user-select: none;
   z-index: 1;
@@ -60,27 +54,22 @@
   z-index: 2;
 }
 
-@function get-vw($target) {
-  $vw-context: (1280 * 0.01) * 1px;
-  @return ($target/$vw-context) * 1vw;
-}
-
 .hero__title {
-  margin-bottom: vw(50px);
-  font-size: vw(34px);
+  margin-bottom: rem(50);
+  font-size: rem(34);
   line-height: 100%;
   font-weight: 400;
-  color: #1e1842;
+  text-transform: uppercase;
 }
 
 .hero__subtitle {
   font-family: var(--second-family);
-  max-width: vw(621px);
-  color: #1e1842;
-  font-size: vw(56px);
+  max-width: rem(621);
+  font-size: rem(56);
   line-height: 111%;
   letter-spacing: -0.03em;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 .hero-title__name {
@@ -90,30 +79,32 @@
 .scroll-hint {
   align-self: start;
   margin-top: 100px;
-  gap: vw(15px);
-  font-size: vw(24px);
+  gap: rem(15);
+  font-size: rem(24);
   font-weight: 300;
   line-height: 1;
   display: flex;
   align-items: center;
+  color: var(--color-green);
+  text-transform: uppercase;
 }
 
 .wheel {
-  border: vw(1px) solid #66b72a;
-  border-radius: vw(50px);
-  width: vw(25px);
-  height: vw(45px);
+  border: rem(1) solid var(--color-green);
+  border-radius: rem(50);
+  width: rem(25);
+  height: rem(45);
   position: relative;
 }
 
 .wheel:before {
   content: "";
-  width: vw(7px);
-  height: vw(7px);
+  width: rem(7);
+  height: rem(7);
   border-radius: 100%;
-  background-color: #66b72a;
+  background-color: var(--color-green);
   position: absolute;
-  top: vw(7px);
+  top: rem(7);
   left: 50%;
   translate: -50% 0;
   animation: wheel-scroll 2s ease infinite;
@@ -141,53 +132,53 @@
   }
 }
 
-@media screen and (max-width: 1279px) {
-  .hero-product-img {
-    translate: -50% 50%;
-  }
-}
-@media screen and (max-width: 767px) {
-  .hero-section {
-    position: relative;
-  }
+// @media screen and (max-width: 1279px) {
+//   .hero-product-img {
+//     translate: -50% 50%;
+//   }
+// }
+// @media screen and (max-width: 767px) {
+//   .hero-section {
+//     position: relative;
+//   }
 
-  .hero-container {
-    align-items: start;
-  }
+//   .hero-container {
+//     align-items: start;
+//   }
 
-  .hero-content {
-    position: static;
-  }
+//   .hero-content {
+//     position: static;
+//   }
 
-  .hero-product-img {
-    translate: 0 0;
-    bottom: 50px;
-    left: auto;
-    right: 10px;
-  }
+//   .hero-product-img {
+//     translate: 0 0;
+//     bottom: 50px;
+//     left: auto;
+//     right: 10px;
+//   }
 
-  .hero-woman-img {
-    right: auto;
-    left: 10px;
-  }
+//   .hero-woman-img {
+//     right: auto;
+//     left: 10px;
+//   }
 
-  .scroll-hint {
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 16px;
-  }
+//   .scroll-hint {
+//     margin-top: 20px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     font-size: 16px;
+//   }
 
-  .hero-title {
-    font-size: 24px;
-    line-height: 120%;
-    text-align: center;
-  }
+//   .hero-title {
+//     font-size: 24px;
+//     line-height: 120%;
+//     text-align: center;
+//   }
 
-  .hero-subtitle {
-    margin-top: 20px;
-    font-size: 28px;
-    line-height: 100%;
-    text-align: center;
-  }
-}
+//   .hero-subtitle {
+//     margin-top: 20px;
+//     font-size: 28px;
+//     line-height: 100%;
+//     text-align: center;
+//   }
+// }

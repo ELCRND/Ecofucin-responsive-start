@@ -55,7 +55,7 @@ const swipeThreshold = 80; // необходимая длина свайпа д�
 function isMobileDevice() {
   return (
     window.matchMedia("(min-width: 480px)").matches &&
-    window.matchMedia("(max-width: 1023px)").matches
+    window.matchMedia("(max-width: 123px)").matches
   );
 }
 

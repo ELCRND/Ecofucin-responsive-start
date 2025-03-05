@@ -1,19 +1,16 @@
 @use "../helpers/" as *;
 
 .usage {
-  padding-top: vw(118px);
-  background-color: #66b72a;
+  padding-top: rem(70);
+  background-color: var(--color-green);
   display: flex;
-  flex-direction: column;
   align-items: center;
-}
-
-.usage__container {
+  justify-content: center;
 }
 
 .usage__title {
-  margin-bottom: vw(50px);
-  font-size: vw(36px);
+  margin-bottom: rem(50);
+  font-size: rem(36);
   font-family: var(--second-family);
   line-height: 100%;
   font-weight: 400;
@@ -24,34 +21,34 @@
 .usage__content {
   display: flex;
   justify-content: center;
-  gap: vw(62px);
+  gap: rem(62);
   align-items: center;
 }
 
 .usage__images {
   display: flex;
-  gap: vw(24px);
+  gap: rem(24);
   user-select: none;
 
   img {
-    width: vw(205px);
+    width: rem(205);
   }
 }
 
 .usage__instructions {
-  margin-bottom: vw(40px);
-  padding: vw(40px);
-  border-radius: vw(30px);
+  margin-bottom: rem(40);
+  padding: rem(40);
+  border-radius: rem(30);
   background-color: var(--color-white);
   color: var(--color-green-alt);
 
   h3 {
-    font-size: vw(24px);
+    font-size: rem(24);
     font-family: var(--second-family);
     font-weight: 500;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: vw(30px);
+    margin-bottom: rem(30);
 
     span {
       font-size: 0.7em;
@@ -63,20 +60,20 @@
   .usage__item {
     display: flex;
     align-items: center;
-    gap: vw(16px);
+    gap: rem(16);
 
     &:not(:last-of-type) {
-      margin-bottom: vw(20px);
+      margin-bottom: rem(20);
     }
 
     img {
-      width: vw(55px);
+      width: rem(55);
       user-select: none;
     }
 
     p {
-      max-width: vw(444px);
-      font-size: vw(16px);
+      max-width: rem(444);
+      font-size: rem(16);
       font-weight: 400;
       line-height: 125%;
 
@@ -91,25 +88,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: vw(20px);
+  gap: rem(20);
   color: var(--color-white);
   text-align: center;
 
   p:first-of-type {
-    max-width: vw(958px);
-    font-size: vw(20px);
+    max-width: rem(958);
+    font-size: rem(20);
     line-height: 100%;
     font-weight: 400;
   }
 
   p:last-of-type {
-    font-size: vw(14px);
+    font-size: rem(14);
     line-height: 143%;
     font-weight: 400;
   }
 }
 
-// @media (max-width: vw(1023px)) {
+// @media (max-width: rem(1023)) {
 //   .usage-images {
 //     flex-direction: column;
 //     flex-grow: 1;
@@ -117,25 +114,25 @@
 //   }
 // }
 
-// @media (max-width: vw(767px)) {
+// @media (max-width: rem(767)) {
 //   .usage-container {
 //     justify-content: start;
 //   }
 
 //   .usage-title {
-//     font-size: vw(24px);
+//     font-size: rem(24);
 //   }
 
 //   .usage-content {
-//     margin-top: vw(20px);
+//     margin-top: rem(20);
 //     flex-direction: column;
-//     gap: vw(20px);
+//     gap: rem(20);
 //   }
 
 //   .usage-instructions {
-//     padding: vw(12px);
-//     border-radius: vw(20px);
-//     gap: vw(12px);
+//     padding: rem(12);
+//     border-radius: rem(20);
+//     gap: rem(12);
 //   }
 
 //   .usage-images {
@@ -144,28 +141,28 @@
 //   }
 
 //   .usage-text {
-//     margin-top: vw(20px);
+//     margin-top: rem(20);
 //   }
 
 //   .instruction-title {
 //     margin-bottom: 0;
-//     font-size: vw(18px);
+//     font-size: rem(18);
 //   }
 
 //   .instruction-text {
-//     font-size: vw(14px);
+//     font-size: rem(14);
 //   }
 
 //   .additional-info {
-//     font-size: vw(14px);
+//     font-size: rem(14);
 //   }
 
 //   .instruction-icon {
-//     width: vw(30px);
-//     height: vw(30px);
+//     width: rem(30);
+//     height: rem(30);
 //   }
 
 //   .disclaimer {
-//     font-size: vw(12px);
+//     font-size: rem(12);
 //   }
 // }

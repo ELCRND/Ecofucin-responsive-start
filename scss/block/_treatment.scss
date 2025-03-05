@@ -1,0 +1,117 @@
+@use "../helpers/" as *;
+
+.treatment {
+  padding-top: rem(70);
+  background-color: var(--color-green);
+  display: flex;
+  align-items: center;
+}
+
+.treatment__title {
+  color: var(--color-white);
+  font-size: rem(36);
+  font-family: var(--second-family);
+  font-weight: 400;
+  line-height: 100%;
+  text-align: center;
+}
+
+.treatment__content {
+  margin-top: rem(50);
+  display: flex;
+  align-items: center;
+  gap: rem(60);
+}
+
+.treatment__card {
+  width: rem(526);
+  min-height: rem(140);
+  padding-left: rem(120);
+  padding-right: rem(40);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+  border-radius: rem(30);
+  background-color: var(--color-white);
+
+  p {
+    max-width: rem(350);
+    font-size: rem(16);
+    line-height: 125%;
+    font-weight: 600;
+    color: var(--color-green-alt);
+  }
+
+  img {
+    width: rem(110);
+    position: absolute;
+    top: 0;
+    left: 0;
+    user-select: none;
+  }
+}
+
+.treatment__text p {
+  max-width: rem(593);
+  color: var(--color-white);
+  font-size: rem(18);
+  font-family: var(--font-family);
+  font-weight: 400;
+  line-height: 133%;
+}
+
+.treatment__description {
+  min-width: rem(1102);
+  color: var(--color-white);
+  font-size: rem(18);
+  font-family: var(--second-family);
+  font-weight: 400;
+  line-height: 156%;
+  text-align: center;
+  margin-top: rem(50);
+}
+
+//   @media (max-width: rem(767)) {
+//     .treatment-section {
+//       align-items: start;
+//     }
+
+//     .treatment-section .section-title {
+//       font-size: rem(24);
+//       line-height: 120%;
+//     }
+
+//     .treatment-content {
+//       margin-top: rem(20);
+//       flex-direction: column-reverse;
+//       gap: rem(20);
+//     }
+
+//     .treatment-text p {
+//       text-align: center;
+//       font-size: rem(16);
+//       line-height: 120%;
+//     }
+
+//     .treatment-card {
+//       width: 100%;
+//       min-height: auto;
+//       padding: rem(20);
+//       border-radius: rem(20);
+//     }
+
+//     .treatment-card p {
+//       max-width: rem(593);
+//     }
+
+//     .treatment-card img {
+//       display: none;
+//     }
+
+//     .treatment-description {
+//       margin-top: rem(20);
+//       font-size: rem(16);
+//       line-height: 120%;
+//     }
+//   }
