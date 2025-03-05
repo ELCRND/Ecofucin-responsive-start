@@ -1,0 +1,194 @@
+@use "../helpers/" as *;
+
+.thrush {
+  padding-top: vw(100px);
+  padding-bottom: vw(37px);
+  display: flex;
+  align-items: center;
+}
+
+.thrush__container {
+}
+
+.thrush__title {
+  margin-bottom: vw(15px);
+  font-size: vw(36px);
+  font-family: var(--second-family);
+  font-weight: 400;
+  line-height: 100%;
+  text-align: center;
+}
+
+.thrush__description {
+  max-width: vw(1035px);
+  margin-bottom: vw(40px);
+  margin-left: auto;
+  margin-right: auto;
+  font-size: vw(18px);
+  font-weight: 400;
+  line-height: 111%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.thrush__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: vw(20px);
+
+  .thrush__row {
+    display: flex;
+    align-items: center;
+    gap: vw(50px);
+
+    &:first-of-type {
+      .thrush__item {
+        &:nth-of-type(1) {
+          p {
+            max-width: vw(581px);
+            text-align: right;
+            font-weight: 400;
+            font-size: vw(18px);
+            line-height: 133%;
+            text-align: right;
+            color: var(--text-regular);
+          }
+        }
+
+        &:nth-of-type(2) {
+          width: vw(526px);
+          padding: vw(40px);
+          border-radius: vw(30px);
+          background: var(--color-green-alt);
+          position: relative;
+
+          img {
+            width: vw(199px);
+            height: vw(234px);
+            position: absolute;
+            bottom: 0;
+            right: vw(9px);
+            z-index: 0;
+            border-radius: 0 0 vw(18px) 0;
+            user-select: none;
+          }
+
+          p {
+            max-width: vw(292px);
+            font-weight: 400;
+            font-size: vw(18px);
+            line-height: 125%;
+            position: relative;
+            z-index: 1;
+            color: var(--color-white);
+          }
+        }
+      }
+    }
+
+    &:last-of-type {
+      .thrush__item:nth-of-type(1) {
+        padding: vw(30px) vw(25px) vw(30px) vw(40px);
+        border-radius: vw(30px);
+        background: var(--color-green-alt);
+
+        p {
+          max-width: vw(461px);
+          font-weight: 600;
+          font-size: vw(16px);
+          line-height: 125%;
+          color: var(--color-white);
+        }
+      }
+
+      .thrush__item:nth-of-type(2) {
+        p {
+          max-width: vw(581px);
+          font-weight: 400;
+          font-size: vw(16px);
+          line-height: 133%;
+          color: var(--text-regular);
+        }
+      }
+    }
+  }
+}
+
+//   @media (max-width: vw(1279px)) {
+//     .thrush-item:nth-of-type(3) {
+//       margin-right: vw(50px);
+//     }
+
+//     .thrush-item:nth-of-type(4) {
+//       margin-left: 0;
+//     }
+//   }
+
+//   @media (max-width: vw(1023px)) {
+//     .thrush-content {
+//       grid-template-columns: repeat(auto-fit, minmax(vw(360px), 1fr));
+//     }
+
+//     .thrush-item:nth-of-type(3) {
+//       margin-right: vw(20px);
+//     }
+
+//     .thrush-item:nth-of-type(2) {
+//       margin-left: vw(20px);
+//     }
+//   }
+
+//   @media (max-width: vw(767px)) {
+//     .thrush-section {
+//       align-items: start;
+//     }
+
+//     .thrush-section .section-title {
+//       font-size: vw(24px);
+//       line-height: 100%;
+//     }
+
+//     .section-description {
+//       font-size: vw(16px);
+//       line-height: 100%;
+//     }
+
+//     .thrush-content {
+//       margin-top: vw(30px);
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//       gap: 0;
+//     }
+
+//     .thrush-content .thrush-item {
+//       max-width: vw(526px);
+//       margin: 0;
+//       padding: vw(12px);
+//       border-radius: vw(20px);
+//     }
+
+//     .thrush-content .thrush-item p {
+//       font-size: vw(14px);
+//       line-height: 120%;
+//       text-align: left;
+//     }
+
+//     .thrush-item:nth-of-type(2) {
+//       order: 1;
+//       width: 100%;
+//     }
+
+//     .thrush-item:nth-of-type(1) {
+//       order: 2;
+//     }
+
+//     .thrush-item:nth-of-type(3) {
+//       order: 3;
+//     }
+
+//     .thrush-item:nth-of-type(4) {
+//       order: 4;
+//     }
+//   }
