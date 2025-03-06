@@ -32,7 +32,7 @@ const swipeThreshold = 50; // необходимая длина свайпа д�
 function isSmallScreen() {
   return (
     window.matchMedia("(max-height: 670px)").matches &&
-    window.matchMedia("(max-width: 800px)").matches
+    window.matchMedia("(max-width: 1023px)").matches
   );
 }
 

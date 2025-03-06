@@ -28,6 +28,10 @@
   line-height: 106%;
   text-transform: uppercase;
   text-align: center;
+
+  @include mobile {
+    font-size: 28px;
+  }
 }
 
 .benefits__content {

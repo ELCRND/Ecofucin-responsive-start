@@ -176,6 +176,16 @@
     width: rem(51);
   }
 
+  @include tablet {
+    width: rem(42);
+    border-radius: rem(20) 0 0 rem(20);
+  }
+
+  @include mobile {
+    width: rem(36);
+    border-radius: rem(15) 0 0 rem(15);
+  }
+
   span {
     font-weight: 300;
     font-size: rem(18);
@@ -200,117 +210,3 @@
   translate: 50% 0;
   rotate: -90deg;
 }
-
-// @media (min-width: rem(768)) {
-//   .nav-item a:hover {
-//     opacity: 0.7;
-//   }
-
-//   .nav-item.disabled a:hover {
-//     color: #fff;
-//     cursor: auto;
-//   }
-// }
-
-// @media (max-width: rem(767)) {
-//   .nav-item a:active {
-//     opacity: 0.7;
-//   }
-
-//   .nav-item.disabled a:active {
-//     color: #fff;
-//   }
-// }
-
-// @media (min-width: rem(768)) {
-//   .buy-button:hover {
-//     box-shadow: 0 0 rem(5) rgba(0, 0, 0, 0.5) inset;
-//   }
-// }
-
-// @media (max-width: rem(767)) {
-//   .buy-button:active {
-//     box-shadow: 0 0 rem(5) rgba(0, 0, 0, 0.5) inset;
-//   }
-// }
-
-// @media (max-width: rem(1023)) {
-//   .buy-button {
-//     padding-left: rem(20);
-//     padding-right: rem(20);
-//   }
-// }
-
-// @media screen and (max-width: rem(1023)) {
-//   .main-nav {
-//     text-transform: capitalize;
-//   }
-
-//   .nav-list {
-//     justify-content: space-around;
-//   }
-// }
-
-// @media screen and (max-width: rem(767)) {
-//   .header-container {
-//     min-height: rem(50);
-//   }
-
-//   .main-nav {
-//     width: 100%;
-//     height: 100vh;
-//     padding-top: 20vh;
-//     background-color: #64b22a;
-//     display: flex;
-//     justify-content: center;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     translate: 0 -100%;
-//     z-index: 100;
-//     transition: translate 0.3s ease;
-//     font-size: rem(16);
-//     text-transform: uppercase;
-//     visibility: hidden;
-//   }
-
-//   .main-nav.open {
-//     translate: 0 0;
-//     visibility: visible;
-//   }
-
-//   .nav-list {
-//     flex-direction: column;
-//     justify-content: start;
-//     align-items: center;
-//     gap: rem(20);
-//     opacity: 0;
-//   }
-
-//   .main-nav.open .nav-list {
-//     opacity: 1;
-//   }
-
-//   .header-menu-btn {
-//     display: flex;
-//   }
-
-//   .buy-button {
-//     margin-left: auto;
-//     margin-right: rem(20);
-//     padding: rem(6) rem(18);
-//     font-size: rem(14);
-//   }
-
-//   .buy-button svg {
-//     width: rem(12);
-//     height: rem(16);
-//   }
-
-//   .header-buy-btn {
-//     width: rem(42);
-//     border-radius: rem(20) 0 0 rem(20);
-//     font-size: rem(16);
-//     translate: 0 -50%;
-//   }
-// }

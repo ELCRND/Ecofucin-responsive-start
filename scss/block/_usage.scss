@@ -21,6 +21,10 @@
   font-weight: 400;
   text-align: center;
   color: var(--color-white);
+
+  @include mobile {
+    font-size: 28px;
+  }
 }
 
 .usage__content {

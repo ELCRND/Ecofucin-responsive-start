@@ -610,6 +610,18 @@ button[aria-label]::before {
     width: 3.1875rem;
   }
 }
+@media (width <= 63.99875rem) {
+  .header__buy--fixed {
+    width: 2.625rem;
+    border-radius: 1.25rem 0 0 1.25rem;
+  }
+}
+@media (width <= 48.06125rem) {
+  .header__buy--fixed {
+    width: 2.25rem;
+    border-radius: 0.9375rem 0 0 0.9375rem;
+  }
+}
 .header__buy--fixed span {
   font-weight: 300;
   font-size: 1.125rem;
@@ -741,6 +753,11 @@ button[aria-label]::before {
   font-weight: 400;
   text-transform: uppercase;
 }
+@media (width <= 48.06125rem) {
+  .hero__title {
+    font-size: 24px;
+  }
+}
 
 .hero__subtitle {
   font-family: var(--second-family);
@@ -849,6 +866,11 @@ button[aria-label]::before {
   line-height: 106%;
   text-transform: uppercase;
   text-align: center;
+}
+@media (width <= 48.06125rem) {
+  .benefits__title {
+    font-size: 28px;
+  }
 }
 
 .benefits__content {
@@ -1034,6 +1056,11 @@ button[aria-label]::before {
   text-align: center;
   color: var(--color-white);
 }
+@media (width <= 48.06125rem) {
+  .usage__title {
+    font-size: 28px;
+  }
+}
 
 .usage__content {
   margin-bottom: 2.5rem;
@@ -1187,6 +1214,11 @@ button[aria-label]::before {
   line-height: 100%;
   text-align: center;
 }
+@media (width <= 48.06125rem) {
+  .thrush__title {
+    font-size: 28px;
+  }
+}
 
 .thrush__description {
   max-width: 64.6875rem;
@@ -1214,6 +1246,7 @@ button[aria-label]::before {
 .thrush__content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   row-gap: 1.25rem;
 }
 @media (width <= 63.99875rem) {
@@ -1389,12 +1422,18 @@ button[aria-label]::before {
 }
 
 .symptoms__container {
+  max-width: 71.25rem;
   height: 100%;
   padding-bottom: 1.875rem;
   display: flex;
   flex-direction: column;
   position: relative;
   z-index: 1;
+}
+@media (width <= 63.99875rem) {
+  .symptoms__container {
+    max-width: 89.3772893773vw;
+  }
 }
 
 .symptoms__title {
@@ -1531,6 +1570,7 @@ button[aria-label]::before {
   margin-top: 3.125rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 3.125rem;
 }
 @media (width <= 63.99875rem) {
@@ -1653,6 +1693,7 @@ button[aria-label]::before {
   margin-top: 3.125rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 3.75rem;
 }
 @media (width <= 63.99875rem) {
@@ -1771,6 +1812,11 @@ button[aria-label]::before {
 @media (width <= 63.99875rem) {
   .effectiveness__title {
     margin-bottom: 3.125rem;
+  }
+}
+@media (width <= 48.06125rem) {
+  .effectiveness__title {
+    font-size: 28px;
   }
 }
 

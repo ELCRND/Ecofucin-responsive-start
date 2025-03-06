@@ -28,6 +28,7 @@
   margin-top: rem(50);
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: rem(50);
 
   @include tablet {
