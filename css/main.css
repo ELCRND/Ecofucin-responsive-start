@@ -769,6 +769,11 @@ button[aria-label]::before {
   font-weight: 600;
   text-transform: uppercase;
 }
+@media (width <= 48.06125rem) {
+  .hero__subtitle {
+    font-weight: 500;
+  }
+}
 @media screen and (max-width: 375px) {
   .hero__subtitle {
     font-size: 34px;

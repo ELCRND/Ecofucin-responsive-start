@@ -104,6 +104,10 @@
   font-weight: 600;
   text-transform: uppercase;
 
+  @include mobile {
+    font-weight: 500;
+  }
+
   @media screen and (max-width: 375px) {
     font-size: 34px;
   }
