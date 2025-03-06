@@ -2112,7 +2112,7 @@ button[aria-label]::before {
 @media (width <= 48.06125rem) {
   .footer {
     height: 100vh;
-    translate: 0 40%;
+    translate: 0 30%;
   }
 }
 @media screen and (max-width: 375px) {
