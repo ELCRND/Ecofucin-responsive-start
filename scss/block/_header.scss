@@ -147,6 +147,7 @@
 
   @include mobile {
     margin-right: rem(28);
+    font-size: 12px;
   }
 
   svg {
@@ -180,6 +181,10 @@
     font-size: rem(18);
     transform: rotate(-90deg);
     translate: 2% -90%;
+
+    @include mobile {
+      font-size: 12px;
+    }
   }
 
   img {

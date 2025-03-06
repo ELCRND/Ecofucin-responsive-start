@@ -4,6 +4,11 @@
   padding-top: rem(70);
   display: flex;
   align-items: center;
+
+  @include mobile {
+    padding-top: rem(100);
+    align-items: start;
+  }
 }
 
 .thanks__container {
@@ -72,6 +77,10 @@
   @include tablet {
     max-width: 100%;
   }
+
+  @include mobile {
+    font-size: 28px;
+  }
 }
 
 .thanks-text__description {
@@ -80,12 +89,16 @@
   font-style: normal;
   font-weight: 400;
   font-size: rem(16);
-  line-height: rem(20);
+  line-height: 120%;
   color: #000000;
   margin-bottom: rem(20);
 
   @include tablet {
     margin-bottom: rem(35);
+  }
+
+  @include mobile {
+    font-size: 14px;
   }
 }
 
@@ -108,7 +121,7 @@
   @include mobile {
     width: fit-content;
     padding: 8px 32px 8px 40px;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   &:hover {

@@ -5,6 +5,11 @@
   display: flex;
   position: relative;
   align-items: center;
+
+  @include mobile {
+    padding-top: rem(100);
+    align-items: start;
+  }
 }
 
 .benefits__container {
@@ -53,6 +58,12 @@
   gap: rem(20);
   counter-reset: num;
 
+  @include mobile {
+    p {
+      font-size: 14px !important;
+    }
+  }
+
   li {
     padding: rem(15) rem(20);
     border-radius: rem(50);
@@ -86,6 +97,12 @@
       justify-content: center;
       align-items: center;
       flex-shrink: 0;
+
+      @include mobile {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+      }
     }
 
     p {

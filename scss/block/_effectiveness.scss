@@ -4,6 +4,11 @@
   padding-top: rem(70);
   display: flex;
   align-items: center;
+
+  @include mobile {
+    padding-top: rem(100);
+    align-items: start;
+  }
 }
 
 .effectiveness__title {

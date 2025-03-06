@@ -10,6 +10,11 @@
     padding-top: rem(70);
     padding-bottom: 0;
   }
+
+  @include mobile {
+    padding-top: rem(100);
+    align-items: start;
+  }
 }
 
 .thrush__title {
@@ -38,7 +43,7 @@
   }
 
   @include mobile {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 
@@ -49,6 +54,12 @@
 
   @include tablet {
     row-gap: 0;
+  }
+
+  @include mobile {
+    p {
+      font-size: 12px !important;
+    }
   }
 
   .thrush__row {
