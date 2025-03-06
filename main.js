@@ -5,28 +5,25 @@ const navLinks = menu.querySelectorAll("a");
 const sliderContainer = document.querySelector(".slider-container");
 const slider = document.querySelector(".slider");
 const slides = document.querySelectorAll(".slide");
-const effectivenessSlides = document.querySelector(".effectiveness-slides");
-const prevButton = document.querySelector(".prev");
-const nextButton = document.querySelector(".next");
 const footer = document.querySelector(".page-footer");
 const footerAnchor = document.querySelector(".footer-anchor");
 
-let swipeOff = false;
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        swipeOff = false;
-      } else {
-        swipeOff = true;
-      }
-    });
-  },
-  {
-    root: null,
-    threshold: 1.0,
-  }
-);
+// let swipeOff = false;
+// const observer = new IntersectionObserver(
+//   (entries) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         swipeOff = false;
+//       } else {
+//         swipeOff = true;
+//       }
+//     });
+//   },
+//   {
+//     root: null,
+//     threshold: 1.0,
+//   }
+// );
 
 // observer.observe(footerAnchor);
 
@@ -141,45 +138,3 @@ function goToSlide(index) {
   const offset = -currentSlide * 100;
   slider.style.transform = `translateY(${offset}vh)`;
 }
-
-// горизонтальный слайдер в блоке effectiveness
-// let currentIndex = 0;
-
-// function updateSlider() {
-//   const slideWidth = document.querySelector(".effectiveness-slide").offsetWidth;
-//   const screenWidth = window.innerWidth;
-//   if (screenWidth <= 1079 && screenWidth > 767) {
-//     effectivenessSlides.style.transform = `translateX(-${
-//       currentIndex * slideWidth
-//     }px)`;
-//   } else if (screenWidth <= 767) {
-//     effectivenessSlides.style.transform = `translateX(-${
-//       currentIndex * slideWidth
-//     }px)`;
-//   } else {
-//     effectivenessSlides.style.transform = "translateX(0)";
-//   }
-// }
-
-// prevButton.addEventListener("click", () => {
-//   if (currentIndex > 0) {
-//     currentIndex--;
-//     updateSlider();
-//   }
-// });
-
-// nextButton.addEventListener("click", () => {
-//   const screenWidth = window.innerWidth;
-//   if (screenWidth <= 1079 && screenWidth > 767 && currentIndex < 1) {
-//     currentIndex++;
-//     updateSlider();
-//   } else if (
-//     screenWidth <= 767 &&
-//     currentIndex < effectivenessSlides.childElementCount - 1
-//   ) {
-//     currentIndex++;
-//     updateSlider();
-//   }
-// });
-
-// window.addEventListener("resize", updateSlider);

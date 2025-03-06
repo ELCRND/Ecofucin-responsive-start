@@ -4,6 +4,10 @@
   display: flex;
   align-items: center;
   position: relative;
+
+  @include tablet {
+    padding-top: rem(120);
+  }
 }
 
 .hero__bg {
@@ -15,14 +19,14 @@
 }
 
 .hero__container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
   height: 100%;
   display: flex;
   align-items: center;
   position: relative;
+
+  @include tablet {
+    align-items: start;
+  }
 }
 
 .hero__product-img {
@@ -32,6 +36,17 @@
   right: rem(400);
   user-select: none;
   z-index: 1;
+
+  @include tablet {
+    right: auto;
+    left: 0;
+  }
+
+  @include mobile {
+    width: rem(460);
+    left: 50%;
+    translate: -50%;
+  }
 }
 
 .hero__woman-img {
@@ -42,6 +57,14 @@
   filter: drop-shadow(12px 19px 50px rgba(0, 0, 0, 0.1));
   user-select: none;
   z-index: 1;
+
+  @include tablet {
+    right: 0;
+  }
+
+  @include mobile {
+    display: none;
+  }
 }
 
 .hero__content {
@@ -78,7 +101,7 @@
 
 .scroll-hint {
   align-self: start;
-  margin-top: 100px;
+  margin-top: rem(100);
   gap: rem(15);
   font-size: rem(24);
   font-weight: 300;
@@ -87,6 +110,13 @@
   align-items: center;
   color: var(--color-green);
   text-transform: uppercase;
+
+  @include tablet {
+    margin-top: rem(80);
+  }
+  @include mobile {
+    margin-top: rem(30);
+  }
 }
 
 .wheel {
@@ -131,54 +161,3 @@
     opacity: 0;
   }
 }
-
-// @media screen and (max-width: 1279px) {
-//   .hero-product-img {
-//     translate: -50% 50%;
-//   }
-// }
-// @media screen and (max-width: 767px) {
-//   .hero-section {
-//     position: relative;
-//   }
-
-//   .hero-container {
-//     align-items: start;
-//   }
-
-//   .hero-content {
-//     position: static;
-//   }
-
-//   .hero-product-img {
-//     translate: 0 0;
-//     bottom: 50px;
-//     left: auto;
-//     right: 10px;
-//   }
-
-//   .hero-woman-img {
-//     right: auto;
-//     left: 10px;
-//   }
-
-//   .scroll-hint {
-//     margin-top: 20px;
-//     margin-left: auto;
-//     margin-right: auto;
-//     font-size: 16px;
-//   }
-
-//   .hero-title {
-//     font-size: 24px;
-//     line-height: 120%;
-//     text-align: center;
-//   }
-
-//   .hero-subtitle {
-//     margin-top: 20px;
-//     font-size: 28px;
-//     line-height: 100%;
-//     text-align: center;
-//   }
-// }

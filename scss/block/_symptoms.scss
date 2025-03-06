@@ -5,6 +5,10 @@
   display: flex;
   align-items: center;
   position: relative;
+
+  @include tablet {
+    align-items: start;
+  }
 }
 
 .symptoms__bg {
@@ -34,6 +38,10 @@
   text-align: center;
   position: relative;
   z-index: 2;
+
+  @include tablet {
+    margin-top: 0;
+  }
 }
 
 .symptoms__description {
@@ -47,6 +55,10 @@
   text-align: center;
   margin-top: rem(10);
   z-index: 2;
+
+  @include tablet {
+    margin-bottom: rem(40);
+  }
 }
 
 .symptoms__list {
@@ -59,6 +71,12 @@
   gap: rem(20);
   position: relative;
   z-index: 2;
+
+  @include tablet {
+    margin-top: 0;
+    align-self: center;
+    justify-self: center;
+  }
 
   li {
     width: rem(280);
@@ -75,6 +93,11 @@
     font-size: rem(18);
     color: #e4e5e5;
     font-weight: 500;
+
+    @include tablet {
+      width: 100%;
+      min-height: rem(200);
+    }
   }
 }
 

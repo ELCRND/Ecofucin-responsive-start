@@ -20,6 +20,10 @@
   display: flex;
   align-items: center;
   gap: rem(50);
+
+  @include tablet {
+    flex-direction: column;
+  }
 }
 
 .importance__card {
@@ -32,6 +36,10 @@
   position: relative;
   display: flex;
   align-items: center;
+
+  @include tablet {
+    width: 100%;
+  }
 }
 
 .importance__text p {
@@ -41,6 +49,11 @@
   line-height: 133%;
   text-align: right;
   position: relative;
+
+  @include tablet {
+    max-width: 100%;
+    text-align: left;
+  }
 }
 
 .importance__card p {
@@ -51,6 +64,10 @@
   color: var(--color-white);
   position: relative;
   z-index: 1;
+
+  @include tablet {
+    max-width: rem(450);
+  }
 }
 
 .importance__card img {

@@ -19,10 +19,17 @@
 }
 
 .usage__content {
+  margin-bottom: rem(40);
   display: flex;
   justify-content: center;
   gap: rem(62);
   align-items: center;
+
+  @include tablet {
+    flex-direction: column;
+    justify-content: start;
+    gap: rem(30);
+  }
 }
 
 .usage__images {
@@ -36,11 +43,14 @@
 }
 
 .usage__instructions {
-  margin-bottom: rem(40);
   padding: rem(40);
   border-radius: rem(30);
   background-color: var(--color-white);
   color: var(--color-green-alt);
+
+  @include tablet {
+    width: 100%;
+  }
 
   h3 {
     font-size: rem(24);
@@ -76,6 +86,10 @@
       font-size: rem(16);
       font-weight: 400;
       line-height: 125%;
+
+      @include tablet {
+        max-width: 100%;
+      }
 
       strong {
         font-weight: 900;

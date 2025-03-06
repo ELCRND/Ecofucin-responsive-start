@@ -5,16 +5,16 @@
   display: flex;
   position: relative;
   align-items: center;
+
+  @include tablet {
+    // padding-top: rem(120);
+    // align-items: start;
+  }
 }
 
 .benefits__container {
-  position: relative;
-  display: flex;
   width: min(100%, rem(1080));
-  padding-left: rem(20);
-  padding-right: rem(20);
-  flex-direction: column;
-  align-items: stretch;
+  position: relative;
 }
 
 .benefits__title {
@@ -33,6 +33,12 @@
 .benefits__content {
   display: flex;
   gap: rem(100);
+
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
 }
 
 .benefits__image {
@@ -89,6 +95,10 @@
       font-size: rem(16);
       font-weight: 400;
       line-height: 125%;
+
+      @include tablet {
+        max-width: 100%;
+      }
 
       strong {
         font-weight: 900;

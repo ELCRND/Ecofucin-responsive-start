@@ -4,27 +4,47 @@
   padding-top: rem(70);
   display: flex;
   align-items: center;
+
+  @include tablet {
+    // padding-top: rem(120);
+    // align-items: start;
+  }
 }
 
 .effectiveness__title {
+  margin-bottom: rem(20);
   font-size: rem(36);
   font-family: var(--second-family);
   font-weight: 400;
   line-height: 100%;
   text-align: center;
+
+  @include tablet {
+    margin-bottom: rem(50);
+  }
 }
 
-.effectiveness__slider {
-  margin-top: rem(20);
+.effectiveness__content {
   position: relative;
   overflow: hidden;
 }
 
-.effectiveness__slides {
+.effectiveness__list {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: transform 0.5s ease-in-out;
+
+  @include tablet {
+    align-items: start;
+    justify-content: start;
+    gap: rem(120);
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+}
+
+.effectiveness__list::-webkit-scrollbar {
+  display: none;
 }
 
 .effectiveness__card {
@@ -32,49 +52,41 @@
   flex-direction: column;
   align-items: center;
 
+  @include tablet {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+  }
+
   p {
     max-width: rem(333);
+    font-size: rem(14);
+    line-height: 171%;
+    font-weight: 300;
     text-align: center;
+
+    @include tablet {
+      max-width: 80%;
+      font-size: rem(24);
+    }
   }
 
   .effectiveness-card__icon {
     user-select: none;
     width: rem(60);
+
+    @include tablet {
+      width: rem(100);
+    }
   }
 
   .effectiveness-card__img {
     user-select: none;
     width: rem(231);
+
+    @include tablet {
+      width: rem(400);
+    }
   }
-}
-
-.prev,
-.next {
-  width: rem(40);
-  height: rem(40);
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 100%;
-  color: white;
-  border: none;
-  padding: rem(10);
-  cursor: pointer;
-  font-size: rem(24);
-  line-height: 1;
-  display: none;
-  top: 90%;
-}
-
-.prev {
-  left: 50%;
-  translate: -150% 0;
-}
-
-.next {
-  right: 50%;
-  translate: 150% 0;
 }
 
 .effectiveness-card:nth-of-type(1) .effectiveness-card__icon,
@@ -98,6 +110,10 @@
   font-size: rem(18);
   line-height: 133%;
   color: var(--color-white);
+
+  @include tablet {
+    font-size: rem(24);
+  }
 }
 
 .effectiveness-card__location {
@@ -105,12 +121,20 @@
   font-weight: 400;
   font-size: rem(18);
   line-height: 133%;
+
+  @include tablet {
+    font-size: rem(24);
+  }
 }
 
 .effectiveness-card__count {
   font-weight: 600;
   font-size: rem(16);
   line-height: 150%;
+
+  @include tablet {
+    font-size: rem(20);
+  }
 }
 
 .effectiveness-card__results {
@@ -119,6 +143,11 @@
   padding: rem(20) rem(20) rem(20) rem(40);
   background: var(--color-green);
   position: relative;
+
+  @include tablet {
+    max-width: 80%;
+    padding: rem(30);
+  }
 
   .effectiveness-result__text {
     max-width: rem(295);
@@ -129,8 +158,18 @@
     color: var(--color-white);
     text-align: left;
 
+    @include tablet {
+      max-width: 100%;
+      // text-align: center;
+      font-size: rem(24);
+    }
+
     strong {
       font-weight: 700;
+
+      @include tablet {
+        font-weight: 600;
+      }
     }
   }
 
@@ -143,6 +182,12 @@
     line-height: 114%;
     color: var(--color-white);
     text-align: left;
+
+    @include tablet {
+      margin-top: rem(20);
+      width: 100%;
+      font-size: rem(16);
+    }
   }
 }
 

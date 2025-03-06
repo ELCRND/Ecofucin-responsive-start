@@ -9,7 +9,7 @@
 }
 
 @function fluid($min: 10, $max: 100) {
-  $maxViewportWidth: 9487.8;
+  $maxViewportWidth: 1400;
   $minViewportWidth: 390;
 
   $maxSize: math.div($max, 16);
@@ -28,6 +28,17 @@
 }
 
 @function vw($target) {
-  $vw-context: (1400 * 0.01) * 1px;
+  $vw-context: (1440 * 0.01) * 1px;
+
+  @if (max-width: 1023px) {
+    $vw-context: (1365 * 0.01) * 1px;
+    @return ($target/$vw-context) * 1vw;
+  }
+
+  @if (max-width: 768px) {
+    $vw-context: (1280 * 0.01) * 1px;
+    @return ($target/$vw-context) * 1vw;
+  }
+
   @return ($target/$vw-context) * 1vw;
 }

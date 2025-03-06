@@ -5,6 +5,10 @@
   padding-bottom: rem(37);
   display: flex;
   align-items: center;
+
+  @include tablet {
+    padding-bottom: 0;
+  }
 }
 
 .thrush__title {
@@ -27,6 +31,10 @@
   text-align: center;
   position: relative;
   z-index: 1;
+
+  @include tablet {
+    margin-bottom: rem(70);
+  }
 }
 
 .thrush__content {
@@ -34,14 +42,33 @@
   flex-direction: column;
   row-gap: rem(20);
 
+  @include tablet {
+    row-gap: 0;
+  }
+
   .thrush__row {
     display: flex;
     align-items: center;
     gap: rem(50);
 
+    @include tablet {
+      flex-direction: column;
+      row-gap: 0;
+    }
+
     &:first-of-type {
+      @include tablet {
+        flex-direction: column-reverse;
+      }
+
       .thrush__item {
         &:nth-of-type(1) {
+          @include tablet {
+            padding: rem(40);
+          }
+          @media screen and (max-width: 375px) {
+            padding: rem(10);
+          }
           p {
             max-width: rem(581);
             text-align: right;
@@ -50,6 +77,11 @@
             line-height: 133%;
             text-align: right;
             color: var(--text-regular);
+
+            @include tablet {
+              text-align: left;
+              max-width: 100%;
+            }
           }
         }
 
@@ -59,6 +91,10 @@
           border-radius: rem(30);
           background: var(--color-green-alt);
           position: relative;
+
+          @include tablet {
+            width: 100%;
+          }
 
           img {
             width: rem(199);
@@ -79,6 +115,10 @@
             position: relative;
             z-index: 1;
             color: var(--color-white);
+
+            @include tablet {
+              max-width: rem(460);
+            }
           }
         }
       }
@@ -90,22 +130,41 @@
         border-radius: rem(30);
         background: var(--color-green-alt);
 
+        @include tablet {
+          width: 100%;
+          padding: rem(40);
+        }
+
         p {
           max-width: rem(461);
           font-weight: 600;
           font-size: rem(16);
           line-height: 125%;
           color: var(--color-white);
+
+          @include tablet {
+            max-width: 100%;
+            font-size: rem(18);
+          }
         }
       }
 
       .thrush__item:nth-of-type(2) {
+        @include tablet {
+          padding: rem(40);
+        }
+
         p {
           max-width: rem(581);
           font-weight: 400;
           font-size: rem(16);
           line-height: 133%;
           color: var(--text-regular);
+
+          @include tablet {
+            max-width: 100%;
+            font-size: rem(18);
+          }
         }
       }
     }
