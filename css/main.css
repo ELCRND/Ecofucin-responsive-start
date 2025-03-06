@@ -213,7 +213,7 @@ summary {
   }
 }
 @font-face {
-  font-family: "Roboto SemiCondensed";
+  font-family: "Roboto Condensed";
   src: url("../public/fonts/RobotoSemiCondensed-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
@@ -227,7 +227,7 @@ summary {
   font-display: swap;
 }
 @font-face {
-  font-family: "Roboto SemiCondensed";
+  font-family: "Roboto Condensed";
   src: url("../public/fonts/RobotoSemiCondensed-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
@@ -262,7 +262,7 @@ summary {
   font-display: swap;
 }
 @font-face {
-  font-family: "Roboto SemiCondensed";
+  font-family: "Roboto Condensed";
   src: url("../public/fonts/RobotoSemiCondensed-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
@@ -678,7 +678,7 @@ button[aria-label]::before {
   width: 16.625rem;
   position: absolute;
   bottom: 1.1875rem;
-  right: 25rem;
+  right: 20.625rem;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -700,7 +700,7 @@ button[aria-label]::before {
 }
 @media screen and (max-width: 375px) {
   .hero__product-img {
-    width: 22.5rem;
+    width: 18.75rem;
   }
 }
 @media screen and (max-height: 500px) {
@@ -713,17 +713,12 @@ button[aria-label]::before {
   width: 20.5rem;
   position: absolute;
   bottom: 0;
-  right: 3.625rem;
+  right: -0.5rem;
   filter: drop-shadow(12px 19px 50px rgba(0, 0, 0, 0.1));
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
   z-index: 1;
-}
-@media (width <= 63.99875rem) {
-  .hero__woman-img {
-    right: 0;
-  }
 }
 @media (width <= 48.06125rem) {
   .hero__woman-img {
@@ -761,12 +756,17 @@ button[aria-label]::before {
 
 .hero__subtitle {
   font-family: var(--second-family);
-  max-width: 38.8125rem;
+  max-width: 45rem;
   font-size: 3.5rem;
   line-height: 111%;
   letter-spacing: -0.03em;
   font-weight: 600;
   text-transform: uppercase;
+}
+@media screen and (max-width: 375px) {
+  .hero__subtitle {
+    font-size: 34px;
+  }
 }
 
 .hero-title__name {
