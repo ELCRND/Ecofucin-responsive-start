@@ -42,13 +42,13 @@
 
   @include mobile {
     width: rem(460);
-    bottom: rem(40);
+    bottom: rem(70);
     left: 50%;
     translate: -50%;
   }
 
   @media screen and (max-width: 375px) {
-    width: rem(400);
+    width: rem(360);
   }
 
   @media screen and (max-height: 500px) {

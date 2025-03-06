@@ -15,6 +15,10 @@
     height: 100vh;
     translate: 0 40%;
   }
+
+  @media screen and (max-width: 375px) {
+    translate: 0 20%;
+  }
 }
 
 .footer {

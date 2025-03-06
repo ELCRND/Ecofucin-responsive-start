@@ -8,26 +8,6 @@ const slides = document.querySelectorAll(".slide");
 const footer = document.querySelector(".page-footer");
 const footerAnchor = document.querySelector(".footer-anchor");
 
-// let swipeOff = false;
-// const observer = new IntersectionObserver(
-//   (entries) => {
-//     entries.forEach((entry) => {
-//       if (entry.isIntersecting) {
-//         swipeOff = false;
-//       } else {
-//         swipeOff = true;
-//       }
-//     });
-//   },
-//   {
-//     root: null,
-//     threshold: 1.0,
-//   }
-// );
-
-// observer.observe(footerAnchor);
-
-// Открыть/закрыть меню
 menuBtn.addEventListener("click", () => {
   menu.classList.toggle("open");
   menuBtn.classList.toggle("open");
@@ -50,7 +30,10 @@ let endY = 0;
 const swipeThreshold = 50; // необходимая длина свайпа для скролла на тач устройствах
 
 function isSmallScreen() {
-  return window.matchMedia("(max-height: 700px)").matches;
+  return (
+    window.matchMedia("(max-height: 660px)").matches &&
+    window.matchMedia("(max-width: 800px)").matches
+  );
 }
 
 function handleOrientationChange() {
