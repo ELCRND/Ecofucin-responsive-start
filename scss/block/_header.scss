@@ -6,7 +6,10 @@
   background-color: var(--color-green);
   box-shadow: rem(0) rem(4) rem(20) rgba(0, 0, 0, 0.1);
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 10;
+  flex-shrink: 0;
 }
 
 .header.accent-bg {
@@ -43,9 +46,9 @@
     top: 0;
     left: 0;
     translate: 0 -100%;
-    transition: translate 0.5s ease;
 
     &.open {
+      transition: translate 0.5s ease;
       translate: 0 0;
       display: flex;
       justify-content: center;

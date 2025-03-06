@@ -294,7 +294,6 @@ summary {
   max-width: 89.3772893773vw;
   width: 100%;
   margin-inline: auto;
-  padding-inline: var(--container-padding-x);
 }
 
 .visually-hidden {
@@ -326,6 +325,15 @@ summary {
 .slide {
   height: 100vh;
   width: 100vw;
+}
+.slide.slider-off {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  padding-bottom: 4.375rem;
+}
+.slide.slider-off .hero__container {
+  min-height: 100vh;
 }
 
 .accent-color {
@@ -370,6 +378,10 @@ body {
   font-family: var(--font-family);
   color: var(--text-regular);
   overflow: hidden;
+  position: relative;
+}
+body.slider-off {
+  overflow: visible;
 }
 
 body::-webkit-scrollbar {
@@ -381,6 +393,9 @@ body::-webkit-scrollbar {
   overflow: hidden;
   position: relative;
   touch-action: pan-y;
+}
+.slider-container.slider-off {
+  overflow: visible;
 }
 
 .slider-container.off {
@@ -430,7 +445,10 @@ button[aria-label]::before {
   background-color: var(--color-green);
   box-shadow: 0rem 0.25rem 1.25rem rgba(0, 0, 0, 0.1);
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 10;
+  flex-shrink: 0;
 }
 
 .header.accent-bg {
@@ -469,9 +487,9 @@ button[aria-label]::before {
     top: 0;
     left: 0;
     translate: 0 -100%;
-    transition: translate 0.5s ease;
   }
   .header__nav.open {
+    transition: translate 0.5s ease;
     translate: 0 0;
     display: flex;
     justify-content: center;
@@ -611,15 +629,9 @@ button[aria-label]::before {
 }
 
 .hero {
-  padding-top: 4.375rem;
   display: flex;
   align-items: center;
   position: relative;
-}
-@media (width <= 63.99875rem) {
-  .hero {
-    padding-top: 7.5rem;
-  }
 }
 
 .hero__bg {
@@ -631,6 +643,7 @@ button[aria-label]::before {
 }
 
 .hero__container {
+  padding-top: 4.375rem;
   height: 100%;
   display: flex;
   align-items: center;
@@ -639,6 +652,7 @@ button[aria-label]::before {
 @media (width <= 63.99875rem) {
   .hero__container {
     align-items: start;
+    padding-top: 7.5rem;
   }
 }
 
@@ -661,8 +675,19 @@ button[aria-label]::before {
 @media (width <= 48.06125rem) {
   .hero__product-img {
     width: 28.75rem;
+    bottom: 2.5rem;
     left: 50%;
     translate: -50%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .hero__product-img {
+    width: 25rem;
+  }
+}
+@media screen and (max-height: 500px) {
+  .hero__product-img {
+    display: none;
   }
 }
 
@@ -683,6 +708,11 @@ button[aria-label]::before {
   }
 }
 @media (width <= 48.06125rem) {
+  .hero__woman-img {
+    display: none;
+  }
+}
+@media screen and (max-height: 500px) {
   .hero__woman-img {
     display: none;
   }
@@ -790,6 +820,7 @@ button[aria-label]::before {
   position: relative;
   align-items: center;
 }
+
 .benefits__container {
   width: min(100%, 67.5rem);
   position: relative;
@@ -847,6 +878,11 @@ button[aria-label]::before {
   align-items: center;
   gap: 1.25rem;
   counter-increment: num;
+}
+@media (width <= 48.06125rem) {
+  .benefits__list li {
+    border-radius: 1.875rem;
+  }
 }
 .benefits__list li:last-of-type {
   margin-bottom: 0;
@@ -1076,6 +1112,7 @@ button[aria-label]::before {
 }
 @media (width <= 63.99875rem) {
   .thrush {
+    padding-top: 4.375rem;
     padding-bottom: 0;
   }
 }
@@ -1103,7 +1140,12 @@ button[aria-label]::before {
 }
 @media (width <= 63.99875rem) {
   .thrush__description {
-    margin-bottom: 4.375rem;
+    margin-bottom: 5rem;
+  }
+}
+@media (width <= 48.06125rem) {
+  .thrush__description {
+    font-size: 12px;
   }
 }
 
@@ -1138,9 +1180,9 @@ button[aria-label]::before {
     padding: 2.5rem;
   }
 }
-@media screen and (max-width: 375px) {
+@media (width <= 48.06125rem) {
   .thrush__content .thrush__row:first-of-type .thrush__item:nth-of-type(1) {
-    padding: 0.625rem;
+    padding: 1.25rem;
   }
 }
 .thrush__content .thrush__row:first-of-type .thrush__item:nth-of-type(1) p {
@@ -1170,6 +1212,11 @@ button[aria-label]::before {
     width: 100%;
   }
 }
+@media (width <= 48.06125rem) {
+  .thrush__content .thrush__row:first-of-type .thrush__item:nth-of-type(2) {
+    padding: 1.25rem;
+  }
+}
 .thrush__content .thrush__row:first-of-type .thrush__item:nth-of-type(2) img {
   width: 12.4375rem;
   height: 14.625rem;
@@ -1196,6 +1243,11 @@ button[aria-label]::before {
     max-width: 28.75rem;
   }
 }
+@media (width <= 30.06125rem) {
+  .thrush__content .thrush__row:first-of-type .thrush__item:nth-of-type(2) p {
+    max-width: 20rem;
+  }
+}
 .thrush__content .thrush__row:last-of-type .thrush__item:nth-of-type(1) {
   padding: 1.875rem 1.5625rem 1.875rem 2.5rem;
   border-radius: 1.875rem;
@@ -1205,6 +1257,11 @@ button[aria-label]::before {
   .thrush__content .thrush__row:last-of-type .thrush__item:nth-of-type(1) {
     width: 100%;
     padding: 2.5rem;
+  }
+}
+@media (width <= 48.06125rem) {
+  .thrush__content .thrush__row:last-of-type .thrush__item:nth-of-type(1) {
+    padding: 1.25rem;
   }
 }
 .thrush__content .thrush__row:last-of-type .thrush__item:nth-of-type(1) p {
@@ -1223,6 +1280,11 @@ button[aria-label]::before {
 @media (width <= 63.99875rem) {
   .thrush__content .thrush__row:last-of-type .thrush__item:nth-of-type(2) {
     padding: 2.5rem;
+  }
+}
+@media (width <= 48.06125rem) {
+  .thrush__content .thrush__row:last-of-type .thrush__item:nth-of-type(2) {
+    padding: 1.25rem;
   }
 }
 .thrush__content .thrush__row:last-of-type .thrush__item:nth-of-type(2) p {
@@ -1560,6 +1622,7 @@ button[aria-label]::before {
   display: flex;
   align-items: center;
 }
+
 .effectiveness__title {
   margin-bottom: 1.25rem;
   font-size: 2.25rem;
@@ -1790,6 +1853,11 @@ button[aria-label]::before {
   width: 12.625rem;
   filter: drop-shadow(0.625rem 1.25rem 1.25rem rgba(0, 0, 0, 0.2));
 }
+@media screen and (max-width: 375px) {
+  .thanks__images img {
+    width: 9.5rem;
+  }
+}
 
 .thanks__wrapper {
   display: flex;
@@ -1861,6 +1929,14 @@ button[aria-label]::before {
   text-wrap: nowrap;
   transition: 0.2s;
 }
+@media (width <= 48.06125rem) {
+  .thanks-text__where-buy {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 8px 32px 8px 40px;
+    font-size: 14px;
+  }
+}
 .thanks-text__where-buy:hover {
   opacity: 0.8;
 }
@@ -1878,6 +1954,12 @@ button[aria-label]::before {
 @media (width <= 63.99875rem) {
   .footer {
     padding-bottom: 0;
+  }
+}
+@media (width <= 48.06125rem) {
+  .footer {
+    height: 100vh;
+    translate: 0 40%;
   }
 }
 

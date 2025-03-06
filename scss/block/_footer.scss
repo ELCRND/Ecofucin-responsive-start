@@ -10,6 +10,11 @@
   @include tablet {
     padding-bottom: 0;
   }
+
+  @include mobile {
+    height: 100vh;
+    translate: 0 40%;
+  }
 }
 
 .footer {

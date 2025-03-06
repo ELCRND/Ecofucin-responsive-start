@@ -1,13 +1,8 @@
 @use "../helpers/" as *;
 .hero {
-  padding-top: rem(70);
   display: flex;
   align-items: center;
   position: relative;
-
-  @include tablet {
-    padding-top: rem(120);
-  }
 }
 
 .hero__bg {
@@ -19,6 +14,8 @@
 }
 
 .hero__container {
+  padding-top: rem(70);
+
   height: 100%;
   display: flex;
   align-items: center;
@@ -26,6 +23,7 @@
 
   @include tablet {
     align-items: start;
+    padding-top: rem(120);
   }
 }
 
@@ -44,8 +42,17 @@
 
   @include mobile {
     width: rem(460);
+    bottom: rem(40);
     left: 50%;
     translate: -50%;
+  }
+
+  @media screen and (max-width: 375px) {
+    width: rem(400);
+  }
+
+  @media screen and (max-height: 500px) {
+    display: none;
   }
 }
 
@@ -63,6 +70,9 @@
   }
 
   @include mobile {
+    display: none;
+  }
+  @media screen and (max-height: 500px) {
     display: none;
   }
 }

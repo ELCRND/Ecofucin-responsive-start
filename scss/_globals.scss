@@ -17,6 +17,11 @@ body {
   font-family: var(--font-family);
   color: var(--text-regular);
   overflow: hidden;
+  position: relative;
+
+  &.slider-off {
+    overflow: visible;
+  }
 }
 
 body::-webkit-scrollbar {
@@ -28,6 +33,10 @@ body::-webkit-scrollbar {
   overflow: hidden;
   position: relative;
   touch-action: pan-y;
+
+  &.slider-off {
+    overflow: visible;
+  }
 }
 
 .slider-container.off {

@@ -4,11 +4,6 @@
   padding-top: rem(70);
   display: flex;
   align-items: center;
-
-  @include tablet {
-    // padding-top: rem(120);
-    // align-items: start;
-  }
 }
 
 .effectiveness__title {

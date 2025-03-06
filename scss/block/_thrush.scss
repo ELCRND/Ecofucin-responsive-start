@@ -7,6 +7,7 @@
   align-items: center;
 
   @include tablet {
+    padding-top: rem(70);
     padding-bottom: 0;
   }
 }
@@ -33,7 +34,11 @@
   z-index: 1;
 
   @include tablet {
-    margin-bottom: rem(70);
+    margin-bottom: rem(80);
+  }
+
+  @include mobile {
+    font-size: 12px;
   }
 }
 
@@ -66,8 +71,8 @@
           @include tablet {
             padding: rem(40);
           }
-          @media screen and (max-width: 375px) {
-            padding: rem(10);
+          @include mobile {
+            padding: rem(20);
           }
           p {
             max-width: rem(581);
@@ -95,6 +100,9 @@
           @include tablet {
             width: 100%;
           }
+          @include mobile {
+            padding: rem(20);
+          }
 
           img {
             width: rem(199);
@@ -119,6 +127,10 @@
             @include tablet {
               max-width: rem(460);
             }
+
+            @include mobile-s {
+              max-width: rem(320);
+            }
           }
         }
       }
@@ -133,6 +145,9 @@
         @include tablet {
           width: 100%;
           padding: rem(40);
+        }
+        @include mobile {
+          padding: rem(20);
         }
 
         p {
@@ -152,6 +167,9 @@
       .thrush__item:nth-of-type(2) {
         @include tablet {
           padding: rem(40);
+        }
+        @include mobile {
+          padding: rem(20);
         }
 
         p {

@@ -47,21 +47,24 @@ let isScrolling = false;
 // Настройки свайпа на тач устройствах
 let startY = 0;
 let endY = 0;
-const swipeThreshold = 80; // необходимая длина свайпа для скролла на тач устройствах
+const swipeThreshold = 50; // необходимая длина свайпа для скролла на тач устройствах
 
-function isMobileDevice() {
-  return (
-    window.matchMedia("(min-width: 480px)").matches &&
-    window.matchMedia("(max-width: 123px)").matches
-  );
+function isSmallScreen() {
+  return window.matchMedia("(max-height: 700px)").matches;
 }
 
 function handleOrientationChange() {
-  if (isMobileDevice()) {
+  if (isSmallScreen()) {
+    sliderContainer.classList.add("slider-off");
+    document.body.classList.add("slider-off");
+    slides.forEach((slide) => slide.classList.add("slider-off"));
     window.removeEventListener("wheel", handleScroll);
     slider.removeEventListener("touchend", handleTouch);
     slider.style.transform = `translateY(0)`;
   } else {
+    sliderContainer.classList.remove("slider-off");
+    document.body.classList.remove("slider-off");
+    slides.forEach((slide) => slide.classList.remove("slider-off"));
     window.addEventListener("wheel", handleScroll);
     slider.addEventListener("touchend", handleTouch);
   }
@@ -72,18 +75,6 @@ handleOrientationChange();
 
 function handleScroll(e) {
   if (isScrolling) return; // debounce
-
-  if (currentSlide === slides.length - 1 && e.deltaY > 0) {
-    // footer.classList.remove("slide");
-    sliderContainer.classList.add("off");
-    document.body.classList.add("visible");
-    return;
-  } else if (currentSlide === slides.length - 1 && e.deltaY < 0) {
-    if (swipeOff) return;
-    // footer.classList.add("slide");
-    sliderContainer.classList.remove("visible");
-    document.body.classList.remove("visible");
-  }
 
   isScrolling = true;
 
@@ -105,18 +96,6 @@ slider.addEventListener("touchmove", (e) => {
 function handleTouch() {
   if (endY === 0) return;
   const deltaY = startY - endY;
-
-  if (currentSlide === slides.length - 1 && deltaY > 0) {
-    // footer.classList.remove("slide");
-    sliderContainer.classList.add("off");
-    document.body.classList.add("visible");
-    return;
-  } else if (currentSlide === slides.length - 1 && deltaY < 0) {
-    if (swipeOff) return;
-    // footer.classList.add("slide");
-    sliderContainer.classList.remove("visible");
-    document.body.classList.remove("visible");
-  }
 
   if (deltaY > swipeThreshold) {
     goToSlide(currentSlide + 1);

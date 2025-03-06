@@ -30,6 +30,10 @@
   img {
     width: rem(202);
     filter: drop-shadow(rem(10) rem(20) rem(20) rgba(0, 0, 0, 0.2));
+
+    @media screen and (max-width: 375px) {
+      width: rem(152);
+    }
   }
 }
 
@@ -100,6 +104,12 @@
   color: var(--color-green-dark);
   text-wrap: nowrap;
   transition: 0.2s;
+
+  @include mobile {
+    width: fit-content;
+    padding: 8px 32px 8px 40px;
+    font-size: 14px;
+  }
 
   &:hover {
     opacity: 0.8;
