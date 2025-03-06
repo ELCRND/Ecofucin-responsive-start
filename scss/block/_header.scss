@@ -140,6 +140,10 @@
   font-size: rem(16);
   text-wrap: nowrap;
 
+  &:hover {
+    box-shadow: 0 0 rem(12) rgba(0, 0, 0, 0.2) inset;
+  }
+
   @include tablet {
     margin-left: auto;
     margin-right: rem(40);
@@ -171,6 +175,10 @@
   text-align: center;
   color: var(--color-green-dark);
   text-wrap: nowrap;
+
+  &:hover {
+    box-shadow: 0 0 rem(20) rgba(0, 0, 0, 0.2) inset;
+  }
 
   @include mobile {
     width: rem(51);

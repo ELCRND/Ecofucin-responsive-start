@@ -572,6 +572,9 @@ button[aria-label]::before {
   font-size: 1rem;
   text-wrap: nowrap;
 }
+.header__buy:hover {
+  box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.2) inset;
+}
 @media (width <= 63.99875rem) {
   .header__buy {
     margin-left: auto;
@@ -604,6 +607,9 @@ button[aria-label]::before {
   text-align: center;
   color: var(--color-green-dark);
   text-wrap: nowrap;
+}
+.header__buy--fixed:hover {
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.2) inset;
 }
 @media (width <= 48.06125rem) {
   .header__buy--fixed {
