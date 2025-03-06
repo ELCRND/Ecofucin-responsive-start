@@ -762,7 +762,7 @@ button[aria-label]::before {
 
 .hero__subtitle {
   font-family: var(--second-family);
-  max-width: 45rem;
+  max-width: 43rem;
   font-size: 3.5rem;
   line-height: 111%;
   letter-spacing: -0.03em;
