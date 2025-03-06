@@ -870,6 +870,7 @@ button[aria-label]::before {
 @media (width <= 48.06125rem) {
   .benefits__title {
     font-size: 28px;
+    text-transform: none;
   }
 }
 
@@ -892,6 +893,11 @@ button[aria-label]::before {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+@media (width <= 48.06125rem) {
+  .benefits__image {
+    width: 18.75rem;
+  }
 }
 .benefits__image img {
   width: 100%;
@@ -945,8 +951,8 @@ button[aria-label]::before {
 }
 @media (width <= 48.06125rem) {
   .benefits__list li:before {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     font-size: 24px;
   }
 }

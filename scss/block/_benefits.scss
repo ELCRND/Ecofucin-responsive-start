@@ -31,6 +31,7 @@
 
   @include mobile {
     font-size: 28px;
+    text-transform: none;
   }
 }
 
@@ -50,6 +51,10 @@
   filter: drop-shadow(rem(15) rem(12) rem(12) rgba(84, 84, 84, 0.25));
   flex-grow: 1;
   user-select: none;
+
+  @include mobile {
+    width: rem(300);
+  }
   img {
     width: 100%;
   }
@@ -103,8 +108,8 @@
       flex-shrink: 0;
 
       @include mobile {
-        width: 40px;
-        height: 40px;
+        width: 32px;
+        height: 32px;
         font-size: 24px;
       }
     }
